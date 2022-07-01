@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand bg-light">
+    <div class="container-fluid">
+            <ul class="navbar-nav justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" [routerLink]="homeLink">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="logOut()" [innerText]="innerText" routerLink="/login"></a>
+              </li>
+            </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>

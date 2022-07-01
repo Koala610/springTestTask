@@ -1,0 +1,35 @@
+<h1 [innerText]="header"></h1>
+<button class="btn btn-primary" (click)="showAddForm()">Add student</button>
+
+<ul class="list-group" *ngIf="!isShown">
+    <li class="list-group-item d-flex flex-column justify-content-space" *ngFor="let student of students; let i = index;">
+        <h5>Name: {{student.name}}</h5>
+        <h5>Surname: {{student.surname}}</h5>
+        <button (click)="deleteStudent(student.id)" class="btn btn-primary m-0 w-auto">Delete</button>
+    </li>
+</ul>
+
+<div *ngIf="isShown">
+    <h2 style="text-align:center;">Add student</h2>
+    <form class="form w-75"  #loginForm="ngForm" (ngSubmit)="addStudent(loginForm)"> 
+        <div class="mb-1">
+            <label for="nameInput1" class="form-label">Name</label>
+            <input  class="form-control" id="nameInput1" name="name" ngModel>
+        </div>
+        <div class="mb-1">
+            <label for="surnameInput1" class="form-label">Surname</label>
+            <input class="form-control" id="surnameInput1" name="surname" ngModel>
+        </div>
+        <div class="mb-1">
+            <label for="ageInput1" class="form-label">Age</label>
+            <input class="form-control" id="ageInput1" name="age" ngModel>
+        </div>
+        <div class="mb-1">
+            <label for="emailInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="emailInput1" name="email" ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary m-10 w-auto" >Add</button>
+    
+    </form>
+</div>
+

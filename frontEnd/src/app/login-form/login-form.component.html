@@ -1,0 +1,15 @@
+
+<form #loginForm="ngForm" (ngSubmit)="sendDataToAPI(loginForm)" class="m-0 w-auto d-flex flex-column justify-content-center align-items-center"> 
+    <div class="mb-3">
+        <label for="inputLogin1" class="form-label">Login</label>
+        <input  class="form-control" id="inputLogin1" name="login" ngModel>
+    </div>
+    <div class="mb-3">
+        <label for="inputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword1" name="password" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+
+</form>
+
+
