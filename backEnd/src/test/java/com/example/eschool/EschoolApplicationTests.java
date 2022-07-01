@@ -1,7 +1,11 @@
 package com.example.eschool;
 
-class EschoolApplicationTests {
+import org.springframework.boot.test.context.SpringBootTest;
+import org.testng.annotations.Test;
 
+@SpringBootTest
+class EschoolApplicationTests {
+	@Test
 	void contextLoads() {
 	}
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Building tests">
+    <test name="build tests">
+        <groups>
+            <run>
+                <include name="unittest">
+
+                </include>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.example.*"></package>
+        </packages>
+    </test>
+
+</suite>

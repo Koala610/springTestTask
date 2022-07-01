@@ -11,10 +11,6 @@ CREATE TABLE IF NOT EXISTS users
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS users
-    OWNER to postgres;
-
-
 CREATE TABLE IF NOT EXISTS students
 (
     id serial NOT NULL,
@@ -31,6 +27,3 @@ CREATE TABLE IF NOT EXISTS students
 )
 
 TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS students
-    OWNER to postgres;

@@ -5,6 +5,8 @@
     <li class="list-group-item d-flex flex-column justify-content-space" *ngFor="let student of students; let i = index;">
         <h5>Name: {{student.name}}</h5>
         <h5>Surname: {{student.surname}}</h5>
+        <h5>Age: {{student.age}}</h5>
+        <h5>Surname: {{student.email}}</h5>
         <button (click)="deleteStudent(student.id)" class="btn btn-primary m-0 w-auto">Delete</button>
     </li>
 </ul>
